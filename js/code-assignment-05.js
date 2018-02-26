@@ -5,7 +5,7 @@ projectData[0] = {
   id: 1,
   url: 'https://www.arcgis.com/apps/MapTour/index.html?appid=b3b3a7f9b65343829aab12b77d73cf9c',
   title: 'New Orleans Tour',
-  desc: 'An ArcGIS Online Story Map Tour showing points of interest in New Orleans, LA.',
+  desc: 'An ArcGIS Online Story Map Tour showing locations of rooftop bars in New Orleans, LA.',
   thumb: true,
   keywords: ['New Orleans', 'Louisiana', 'ArcGIS']
 }
