@@ -23,15 +23,6 @@ projectData[1] = {
 
 for (let i = 0; i < projectData.length; i++) {
   createTitle(projectData[i].title)
-  if (projectData[i].thumb === true) {
-    console.log('images/ss-project-' + projectData[i].id + '.png')
-  } else {
-    console.log('images/no-preview.png')
-  }
-}
+  createthumbnail(projectData[i].thumb, projectData[i].id )
 
-
-let createTitle = function (title) {
-  console.log('Title: ' + title)
 }
-function createthumbnail () {}
