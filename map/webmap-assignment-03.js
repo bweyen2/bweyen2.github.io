@@ -9,7 +9,7 @@ let myredpin = L.icon({
   popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
 })
 
-let myMarker = L.marker([29.951105,	-90.081227], {icon: myredpin}).addTo(theworld);
+let mymarker = L.marker([29.951105,	-90.081227], {icon: myredpin}).addTo(theworld);
 
 let mypolystyle = {
   color: 'orange',
@@ -19,6 +19,6 @@ let mypolystyle = {
 let mypolycoords = [
   [29.951848,	-90.088608],
   [29.959582,	-90.075734],
-  [29.944449,	-90.076935]
+  [29.944449,	-90.076935]]
 
 let myPolygon = L.polygon(mypolycoords, mypolystyle).addTo(theworld)
