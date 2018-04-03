@@ -12,7 +12,7 @@ let myredpin = L.icon({
 let mymarker = L.marker([29.951105,	-90.081227], {icon: myredpin}).addTo(theworld);
 
 let mypolystyle = {
-  color: 'orange',
+  color: 'blue',
   fillColor: 'yellow'
 }
 
