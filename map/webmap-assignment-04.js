@@ -1,4 +1,4 @@
-let theworld = L.map('Brookemap4').setView([38,	-98], 4)
+let theworld = L.map('Brookemap').setView([38,	-98], 4)
 let basemap = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}'
 L.tileLayer(basemap).addTo(theworld)
 
