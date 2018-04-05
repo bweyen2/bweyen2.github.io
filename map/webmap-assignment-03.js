@@ -1,4 +1,4 @@
-let theworld = L.map('Brookemap').setView([29.951105,	-90.081227], 13)
+let theworld = L.map('Brookemap3').setView([29.951105,	-90.081227], 13)
 
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}').addTo(theworld)
 
