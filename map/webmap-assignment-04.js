@@ -3,7 +3,7 @@ let basemap = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World
 L.tileLayer(basemap).addTo(theworld)
 
 myGeojsonstyle = function (state) {
-  let age = feature.properties.MED_AGE
+  let age = state.properties.MED_AGE
    let stateColor = 'Olive'
    if ( age < 38 ) { stateColor = 'Green' }
    let myStyle = {
@@ -15,8 +15,8 @@ myGeojsonstyle = function (state) {
 }
 
 function createPopup (state, statelayer) {
-  let name = feature.properties.STATE_NAME
-  let age = feature.properties.MED_AGE
+  let name = state.properties.STATE_NAME
+  let age = state.properties.MED_AGE
   statelayer.bindPopup('Median age of ' + name + ': ' + age + '<br>National average: 38')
 }
 
