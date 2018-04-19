@@ -14,7 +14,7 @@ let worldbasemap = {
 
 geoJSONstyle = function (states) {
   let age = states.properties.MED_AGE
-  let statecolor = 'Light Blue'
+  let statecolor = 'Purple'
   if ( age < 38 ) {statecolor = 'Pink'}
   let mystyle = {
     color: statecolor,
