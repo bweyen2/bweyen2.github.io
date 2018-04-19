@@ -1,4 +1,4 @@
-let theworld = L.map('Brooke').setView([38, -98], 4)
+let theworld = L.map('Brookemap').setView([38, -98], 4)
 
 let basemap = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png').addTo(theworld)
 
