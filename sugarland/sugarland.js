@@ -1,6 +1,6 @@
 let sugarland = L.map('sugarlandtour').setView([38, -98], 4)
 
-let stillthesame = L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}').addTo(sugarlandtour)
+let stillthesame = L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}').addTo(sugarland)
 
 let stay = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}')
 
@@ -36,6 +36,6 @@ brookegeoJSONoptions = {
   style: geoJSONstyle,
   onEachFeature: createPopup
 }
-L.geoJSON(stateDemographics, brookegeoJSONoptions).addTo(sugarlandtour)
+L.geoJSON(stateDemographics, brookegeoJSONoptions).addTo(sugarland)
 
-L.control.layers(jenniferkristian).addTo(sugarlandtour)
+L.control.layers(jenniferkristian).addTo(sugarland)
