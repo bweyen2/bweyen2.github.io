@@ -1,15 +1,15 @@
-let sugarland = L.map('sugarland').setView([38, -98], 4)
+let sugarland = L.map('sugarlandtour').setView([38, -98], 4)
 
-let basemap = L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}').addTo(sugarland)
+let stillthesame = L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}').addTo(sugarlandtour)
 
-let basemap2 = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}')
+let stay = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}')
 
-let basemap3 = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Specialty/DeLorme_World_Base_Map/MapServer/tile/{z}/{y}/{x}')
+let ithappens = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Specialty/DeLorme_World_Base_Map/MapServer/tile/{z}/{y}/{x}')
 
-let worldbasemap = {
-  'Open street map': basemap,
-  'Open top map': basemap2,
-  'World Physical': basemap3,
+let jenniferkristian = {
+  'Open street map': stillthesame,
+  'Open top map': stay,
+  'World Physical': ithappens,
 }
 
 geoJSONstyle = function (states) {
@@ -36,6 +36,6 @@ brookegeoJSONoptions = {
   style: geoJSONstyle,
   onEachFeature: createPopup
 }
-L.geoJSON(stateDemographics, brookegeoJSONoptions).addTo(sugarland)
+L.geoJSON(stateDemographics, brookegeoJSONoptions).addTo(sugarlandtour)
 
-L.control.layers(worldbasemap).addTo(sugarland)
+L.control.layers(jenniferkristian).addTo(sugarlandtour)
