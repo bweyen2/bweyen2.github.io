@@ -1,10 +1,10 @@
 let sugarland = L.map('sugarland').setView([38, -98], 4)
 
-let basemap = L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}').addTo(sugarland)
+let basemap = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png').addTo(sugarland)
 
-let basemap2 = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.{ext}')
+let basemap2 = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png')
 
-let basemap3 = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Specialty/DeLorme_World_Base_Map/MapServer/tile/{z}/{y}/{x}')
+let basemap3 = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}')
 
 let worldbasemap = {
   'Open street map': basemap,
