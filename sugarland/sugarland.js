@@ -15,7 +15,7 @@ let jenniferkristian = {
 geoJSONstyle = function (states) {
   let age = states.properties.MED_AGE
   let statecolor = 'Blue'
-  if ( age < 38 ) {statecolor = 'Pink'}
+  if ( age < 38 ) {statecolor = 'Red'}
   let mystyle = {
     color: statecolor,
     weight: 2,
