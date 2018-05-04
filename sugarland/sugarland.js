@@ -12,30 +12,48 @@ let jenniferkristian = {
   'World Physical': ithappens,
 }
 
-geoJSONstyle = function (states) {
-  let age = states.properties.MED_AGE
-  let statecolor = 'Blue'
-  if ( age < 38 ) {statecolor = 'Red'}
-  let mystyle = {
-    color: statecolor,
-    weight: 2,
-    fillOpacity: 0.2,
-    opacity: 0.3,
-  }
-  return mystyle
-}
+let sugarpin = L.icon({
+  iconUrl: 'sugarland.png',
+  iconSize: [25, 25],
+  iconAnchor: [3, 3],
+  popupAnchor: [-3, -76]
+})
 
-function createPopup (states, statelayer) {
-  let population = states.properties.POPULATION
-  let name = states.properties.STATE_NAME
-  let age = states.properties.MED_AGE
-  statelayer.bindPopup('Population of ' + name + ':' + population + '<br>Median age ' + ': ' + age + '<br>National average: 38')
-}
+let oklahoma = L.marker([33.9531,	-96.4134], {icon: sugarpin}).addTo(sugarland);
+oklahoma.bindPopup('<center>Venue: choctaw grand theater </center>' + '<br>Location: durant , ok, us ' + '<br>Date: may. 4 ' + '<br>Ticket Availability: Sold Out')
 
-brookegeoJSONoptions = {
-  style: geoJSONstyle,
-  onEachFeature: createPopup
-}
-L.geoJSON(stateDemographics, brookegeoJSONoptions).addTo(sugarland)
+let texas = L.marker([30.2770,	-97.7322], {icon: sugarpin}).addTo(sugarland);
+texas.bindPopup('<center>Venue:  iheart country festival  </center>' + '<br>Location: austin, tx, us ' + '<br>Date: may. 5  ' + '<br>Ticket Availability:  buy tickets')
 
-L.control.layers(jenniferkristian).addTo(sugarland)
+var oktotx = [
+    [33.9531,	-96.4134],
+    [30.2770,	-97.7322]
+];
+var oktxline = L.polyline(oktotx, {color: 'blue'}).addTo(sugarland);
+
+let georgia = L.marker([33.4700,	-81.9665], {icon: sugarpin}).addTo(sugarland);
+georgia.bindPopup('<center>Venue: james brown arena </center>' + '<br>Location:  augusta, ga, us ' + '<br>Date: may. 25 ' + '<br>Ticket Availability: buy tickets')
+
+var txtoga = [
+    [30.2770,	-97.7322],
+    [33.4700,	-81.9665]
+];
+var txgaline = L.polyline(txtoga, {color: 'blue'}).addTo(sugarland);
+
+let northcarolina = L.marker([35.8033,	-78.7218], {icon: sugarpin}).addTo(sugarland);
+northcarolina.bindPopup('<center>Venue: pnc arena </center>' + '<br>Location:  raleigh, nc, us ' + '<br>Date: may. 26 ' + '<br>Ticket Availability: buy tickets')
+
+var gatonc = [
+    [33.4700,	-81.9665],
+    [35.8033,	-78.7218]
+];
+var gancline = L.polyline(gatonc, {color: 'blue'}).addTo(sugarland);
+
+let florida = L.marker([29.1852,	-81.0705], {icon: sugarpin}).addTo(sugarland);
+florida.bindPopup('<center>Venue: country 500 music fest </center>' + '<br>Location:  daytona beach, fl, us ' + '<br>Date: may. 27 ' + '<br>Ticket Availability: buy tickets')
+
+var nctofl = [
+    [35.8033,	-78.7218],
+    [29.1852,	-81.0705]
+];
+var ncflline = L.polyline(nctofl, {color: 'blue'}).addTo(sugarland);
