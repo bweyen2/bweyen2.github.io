@@ -6,6 +6,12 @@ let stay = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Nat
 
 let ithappens = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Specialty/DeLorme_World_Base_Map/MapServer/tile/{z}/{y}/{x}')
 
+let sugarbasemap = {
+  'Open street map': stillthesame,
+  'Open top map': stay,
+  'World Physical': ithappens,
+}
+
 let jenniferkristian = {
   'Open street map': stillthesame,
   'Open top map': stay,
@@ -57,3 +63,5 @@ var nctofl = [
     [29.1852,	-81.0705]
 ];
 var ncflline = L.polyline(nctofl, {color: 'blue'}).addTo(sugarland);
+
+L.control.layers(sugarbasemap).addTo(sugarland)
